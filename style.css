@@ -1,0 +1,110 @@
+/* === Global settings === */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1e1e2f;
+}
+
+/* === Calculator container === */
+.calculator {
+  background: #2c2c3c;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  width: 320px;
+  padding: 20px;
+}
+
+/* === Display section === */
+.display {
+  margin-bottom: 20px;
+}
+
+.display-input {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background: #181825;
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-align: right;
+  padding: 0 15px;
+  outline: none;
+}
+
+/* === Button grid === */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* === General button style === */
+.btn {
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+/* Press animation */
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* === Number buttons === */
+.btn-num {
+  background: #3c3c4e;
+  color: #ffffff;
+}
+
+.btn-num:hover {
+  background: #4c4c5e;
+}
+
+/* === Operator buttons (+, -, ×, ÷) === */
+.btn-operator {
+  background: #f39c12;
+  color: #fff;
+}
+
+.btn-operator:hover {
+  background: #e67e22;
+}
+
+/* === Functional buttons (C, ⌫, %) === */
+.btn-func {
+  background: #9b59b6;
+  color: #fff;
+}
+
+.btn-func:hover {
+  background: #8e44ad;
+}
+
+/* === Equal button === */
+.btn-equal {
+  background: #27ae60;
+  color: #fff;
+  grid-column: span 1;
+}
+
+.btn-equal:hover {
+  background: #2ecc71;
+}
+
+/* === Zero button (double width) === */
+.btn-zero {
+  grid-column: span 2;
+}
